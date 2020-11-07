@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8080;
+  port = 5695;
 }
 app.listen(port);
 http.createServer(app).listen(port, () => { console.log("Server is up and running"); });
