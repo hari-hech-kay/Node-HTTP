@@ -23,11 +23,8 @@ app.use((req, res, next) => {
     res.setHeader('Content-Type', 'text/html');
     res.end('Hello World');
 });
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 5695;
-}
+let port = process.env.PORT || 5695;
 app.listen(port);
-http.createServer(app).listen(port, () => { console.log("Server is up and running"); });
+
 
 
